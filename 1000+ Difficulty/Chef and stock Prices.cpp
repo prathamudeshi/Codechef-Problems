@@ -7,14 +7,15 @@ int main() {
 	cin>>t;
 	while(t--)
 	{
-	    int s,a,b,c;
+	    int a,b;
+	    float s,c;
 	    cin>>s>>a>>b>>c;
 	    if(c<0)
 	        c=c*(-1);
-	    if((s+(c*s/100))<=b && (s-(c*s/100))>=a)
-	        cout<<"YES"<<endl;
+	    if((s+(s*(c/100.0)))<=b && (s+(s*(c/100.0)))>=a)
+	        cout<<"Yes"<<endl;
 	    else
-	        cout<<"NO"<<endl;
+	        cout<<"No"<<endl;
 	}
 	return 0;
 }
